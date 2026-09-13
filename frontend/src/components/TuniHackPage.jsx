@@ -14,7 +14,7 @@ import events from "../data/events";
 /* ======================================================== */
 
 const LAST_EDITION_VIDEO =
-  "/videos/tunihack-previous-edition.mp4";
+  "/videos/tunihack-previous-edition-h264.mp4";
 
 /*
  * Add this later when the 2024 / 2025 video is ready:
@@ -1362,6 +1362,7 @@ const TuniHackVideo = ({
                 controls
                 playsInline
                 preload="metadata"
+                poster="/videos/tunihack-previous-edition-poster.jpg"
                 className="
                   h-full
                   w-full

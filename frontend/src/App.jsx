@@ -8,6 +8,7 @@ import DarkModeAura from "./components/DarkModeAura";
 import EcosystemSection from "./components/EcosystemSection";
 import EventsSection from "./components/EventsSection";
 import HomeStorySection from "./components/HomeStorySection";
+import InstallPartyPage from "./components/InstallPartyPage";
 import LoadingScreen from "./components/LoadingScreen";
 import NavBar from "./components/NavBar";
 import ShirtSection from "./components/ShirtSection";
@@ -331,6 +332,11 @@ function App() {
           <Route
             path="/tunihack"
             element={<TuniHackPage />}
+          />
+
+          <Route
+            path="/install-party"
+            element={<InstallPartyPage />}
           />
 
           {/*
