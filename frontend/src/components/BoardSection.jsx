@@ -4,18 +4,18 @@ import {
   useState,
 } from "react";
 
-import asserPhoto from "../assets/asser.png";
-import saharPhoto from "../assets/sahar.png";
-import youssefPhoto from "../assets/youssef.png";
-import israPhoto from "../assets/isra.png";
-import khouloudPhoto from "../assets/khouloud.png";
-import fediPhoto from "../assets/fedi.png";
+import asserPhoto from "../assets/staff/asser.jpg";
+import saharPhoto from "../assets/staff/sahar.jpg";
+import youssefPhoto from "../assets/staff/youssef.jpg";
+import israPhoto from "../assets/staff/isra.jpg";
+import khouloudPhoto from "../assets/staff/khouloud.jpg";
+import fediPhoto from "../assets/staff/fedi.jpg";
 
-import houssemPhoto from "../assets/houssem.png";
-import omarPhoto from "../assets/omar.png";
-import bilelPhoto from "../assets/bilel.png";
-import ghaithPhoto from "../assets/ghaith.png";
-import zinePhoto from "../assets/zine.png";
+import houssemPhoto from "../assets/staff/houssem.jpg";
+import omarPhoto from "../assets/staff/omar.jpg";
+import bilelPhoto from "../assets/staff/bilel.jpg";
+import ghaithPhoto from "../assets/staff/ghaith.jpg";
+import zinePhoto from "../assets/staff/zin.png";
 
 /* ======================================================== */
 /* EXECUTIVE BOARD                                          */
