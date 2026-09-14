@@ -1,3 +1,8 @@
+import captureTheCupLogo from "../assets/logos/CTC.png";
+import forkAndFlagLogo from "../assets/logos/F&F.png";
+import installPartyLogo from "../assets/logos/InstallParty.png";
+import tuniHackLogo from "../assets/logos/TuniHack-nobackground.png";
+
 const events = [
   {
     id: "install-party",
@@ -10,7 +15,7 @@ const events = [
     tags: ["Linux", "Open Source", "Party"],
     accent: "#2A7999",
     status: "Upcoming",
-    logo: null,
+    logo: installPartyLogo,
   },
   {
     id: "capture-the-cup",
@@ -23,7 +28,7 @@ const events = [
     tags: ["CTF Competition", "Beginners", "Intro to CTF"],
     accent: "#122150",
     status: "Upcoming",
-    logo: null,
+    logo: captureTheCupLogo,
   },
   {
     id: "tunihack",
@@ -36,7 +41,7 @@ const events = [
     tags: ["Hackathon", "Pitch Competition", "Innovation"],
     accent: "#2A7999",
     status: "Upcoming",
-    logo: null,
+    logo: tuniHackLogo,
   },
   {
     id: "fork-and-flag",
@@ -49,7 +54,7 @@ const events = [
     tags: ["CTF Competition", "External"],
     accent: "#122150",
     status: "Upcoming",
-    logo: null,
+    logo: forkAndFlagLogo,
   },
 ];
 
