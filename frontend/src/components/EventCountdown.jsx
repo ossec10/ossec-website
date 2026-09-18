@@ -1,8 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import captureTheCupLogo from "../assets/logos/CTC.png";
+import forkAndFlagLogo from "../assets/logos/F&F.png";
+import installPartyLogo from "../assets/logos/InstallParty.png";
+import tuniHackLogo from "../assets/logos/TuniHack-nobackground.png";
 import mascot from "../assets/excited_mascot.png";
 import events from "../data/calender.json";
+
+const eventLogos = {
+  "install-party": installPartyLogo,
+  "capture-the-cup": captureTheCupLogo,
+  tunihack: tuniHackLogo,
+  "fork-and-flag": forkAndFlagLogo,
+};
 
 const getEventDate = (event) => {
   const date = new Date(`${event.date}T${event.time}:00`);
@@ -42,6 +53,20 @@ const getTimeLeft = (event) => {
 };
 
 const pad = (value) => String(value).padStart(2, "0");
+
+const EventTitle = ({ title }) => {
+  const words = title.split(" ");
+  const firstWord = words.shift();
+
+  return (
+    <h3 className="max-w-xl text-[3.6rem] font-semibold leading-[0.92] tracking-[-0.07em] text-[#122150] dark:text-white sm:text-7xl lg:text-[6.8rem]">
+      <span className="block">{firstWord}</span>
+      {words.length > 0 && (
+        <span className="block text-[#2A7999]">{words.join(" ")}</span>
+      )}
+    </h3>
+  );
+};
 
 const EventCountdown = () => {
   const [event, setEvent] = useState(getUpcomingEvent);
@@ -93,9 +118,7 @@ const EventCountdown = () => {
 
         {event && timeLeft ? (
           <>
-            <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#122150] dark:text-white sm:text-4xl">
-              {event.title}
-            </h3>
+            <EventTitle title={event.title} />
             <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[#122150]/55 dark:text-white/55 sm:text-xs">
               {formatDate(event)} / {event.location}
             </p>
@@ -103,12 +126,12 @@ const EventCountdown = () => {
               {Object.entries(timeLeft).map(([label, value], index) => (
                 <div
                   key={label}
-                  className={`py-5 text-center ${index ? "border-l border-[#122150]/10 dark:border-white/10" : ""}`}
+                  className={`py-6 text-center ${index ? "border-l border-[#122150]/10 dark:border-white/10" : ""}`}
                 >
-                  <span className="block font-mono text-3xl font-bold tabular-nums text-[#122150] dark:text-white sm:text-5xl">
+                  <span className="block font-mono text-4xl font-bold tabular-nums text-[#122150] dark:text-white sm:text-6xl">
                     {pad(value)}
                   </span>
-                  <span className="mt-1 block font-mono text-[9px] uppercase tracking-[0.15em] text-[#122150]/50 dark:text-white/50">
+                  <span className="mt-2 block font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[#122150]/65 dark:text-white/65 sm:text-sm">
                     {label}
                   </span>
                 </div>
@@ -129,9 +152,9 @@ const EventCountdown = () => {
 
       <div className="flex justify-center self-end sm:self-center">
         <img
-          src={mascot}
-          alt="mascot"
-          className="h-36 w-auto object-contain sm:h-44 lg:h-52"
+          src={event ? eventLogos[event.id] || mascot : mascot}
+          alt={event && eventLogos[event.id] ? `${event.title} logo` : "OSSEC mascot"}
+          className="max-h-36 w-auto max-w-full object-contain sm:max-h-44 lg:max-h-52"
         />
       </div>
     </div>
