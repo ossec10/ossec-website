@@ -1,0 +1,38 @@
+[
+  {
+    "id": "install-party",
+    "title": "Install Party",
+    "date": "2026-09-27",
+    "time": "10:00",
+    "location": "ENSI",
+    "description": "A morning of workshops and Linux installation sessions, followed by a party later in the day.",
+    "link": "/install-party"
+  },
+  {
+    "id": "capture-the-cup",
+    "title": "Capture the Cup",
+    "date": "2026-10-18",
+    "time": "18:30",
+    "location": "OSSEC Lab, ENSI",
+    "description": "A beginner-friendly CTF competition designed as an introduction to the CTF world.",
+    "link": ""
+  },
+  {
+    "id": "tunihack",
+    "title": "TuniHack",
+    "date": "2026-11-28",
+    "time": "09:00",
+    "location": "ENSI Campus",
+    "description": "A hackathon experience that also includes a pitch competition for teams to present their ideas.",
+    "link": "/tunihack"
+  },
+  {
+    "id": "fork-and-flag",
+    "title": "Fork & Flag",
+    "date": "2027-04-24",
+    "time": "09:00",
+    "location": "ENSI Campus",
+    "description": "An external CTF competition focused on challenge-solving, teamwork and competitive spirit.",
+    "link": ""
+  }
+]

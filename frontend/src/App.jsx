@@ -3,9 +3,11 @@ import { Route, Routes } from "react-router-dom";
 
 import AboutSection from "./components/AboutSection";
 import BoardSection from "./components/BoardSection";
+import CalendarSection from "./components/CalendarSection";
 import ContactSection from "./components/ContactSection";
 import DarkModeAura from "./components/DarkModeAura";
 import EcosystemSection from "./components/EcosystemSection";
+import EventCalendar from "./components/EventCalendar";
 import EventsSection from "./components/EventsSection";
 import HomeStorySection from "./components/HomeStorySection";
 import InstallPartyPage from "./components/InstallPartyPage";
@@ -33,6 +35,8 @@ const HomePage = () => {
       <HomeStorySection />
 
       <AboutSection />
+
+      <CalendarSection />
 
       <EcosystemSection />
 
@@ -301,6 +305,11 @@ function App() {
             element={
               <SectionPage sectionId="events" />
             }
+          />
+
+          <Route
+            path="/calendar"
+            element={<EventCalendar />}
           />
 
           {/* ================================================== */}
