@@ -37,6 +37,10 @@ const navLinks = [
     href: "/events",
   },
   {
+    label: "Resources",
+    href: "/resources",
+  },
+  {
     label: "Sponsors",
     href: "/sponsors",
   },

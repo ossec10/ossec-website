@@ -21,6 +21,7 @@ import SponsorsSection from "./components/SponsorsSection";
 /* ======================================================== */
 
 import TuniHackPage from "./components/TuniHackPage";
+import ResourcesPage from "./components/ResourcesPage";
 
 const LOADING_DISPLAY_TIME = 4000;
 const LOADING_FADE_TIME = 700;
@@ -346,6 +347,11 @@ function App() {
           <Route
             path="/install-party"
             element={<InstallPartyPage />}
+          />
+
+          <Route
+            path="/resources"
+            element={<ResourcesPage />}
           />
 
           {/*
